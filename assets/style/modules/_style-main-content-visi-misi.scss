@@ -1,0 +1,93 @@
+.container {
+  .main {
+    .content.visi-misi {
+      min-height: 60em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: rgba(var(--c-putih-1));
+      background-image: linear-gradient(
+          90deg,
+          rgb(53, 134, 255) 0%,
+          rgba(50, 85, 138, 1) 52%,
+          rgba(50, 85, 138, 0.5) 65%,
+          rgba(50, 85, 138, 0) 75%
+        ),
+        url(../img/visi-misi.jpg);
+      background-repeat: no-repeat;
+      background-size:
+        100% auto,
+        auto 100%;
+      background-position:
+        right bottom,
+        right;
+      height: max-content;
+      gap: 1.5em;
+
+      * {
+        width: 80%;
+        flex-direction: column;
+        color: rgba(var(--c-putih-2));
+        gap: 1.5em;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .p {
+          line-height: 1.8;
+          font-weight: 400;
+        }
+        b {
+          font-weight: 1000 !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .container {
+    .main {
+      .content.visi-misi {
+        * {
+          width: 85%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    .main {
+      .content.visi-misi {
+        background-image: linear-gradient(
+            90deg,
+            rgba(0, 1, 2, 0.9) 0%,
+            rgba(9, 25, 49, 0.5) 52%,
+            rgba(15, 31, 54, 0.25) 65%,
+            rgba(50, 85, 138, 0) 75%
+          ),
+          url(../img/visi-misi.jpg);
+        justify-content: center;
+        max-height: 120vh;
+
+        gap: 5em;
+        * {
+          width: 100%;
+        }
+
+        .h1:first-child {
+          padding-top: 3em;
+        }
+
+        .box {
+          gap: 1.5em;
+
+          &:nth-of-type(3) {
+            padding-bottom: 8em;
+          }
+        }
+      }
+    }
+  }
+}

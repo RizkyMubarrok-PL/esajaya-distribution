@@ -1,0 +1,115 @@
+.container {
+  .main {
+    .beranda {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: rgba(var(--c-putih-1), 0.9);
+      background-image: linear-gradient(75deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 22%, transparent 100%),
+        url(../img/bg-beranda.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      gap: 1em;
+      padding: var(--height-header) var(--px-container) 0 var(--px-container);
+
+      * {
+        max-width: 55%;
+      }
+
+      .h1 {
+        &::after {
+          content: "";
+          display: block;
+          width: 2em;
+          padding-top: 0.8em;
+          border-bottom: 1px solid rgba(var(--c-putih-1), 0.5);
+        }
+      }
+
+      .button {
+        transition: 0.3s ease;
+        margin-top: 1.25em;
+        padding: 0.8em 1.6em;
+        font-size: var(--font-size-2);
+        font-weight: 600;
+        background-color: rgba(var(--c-biru-1));
+
+        &:hover {
+          background-color: rgba(var(--c-biru-1), 0.8);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1092.8px) and (min-height: (1092.8px * 0.8)) {
+  .container {
+    .main {
+      .content.beranda {
+        min-height: 80em !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: (1366px * 0.8)) {
+  .container {
+    .main {
+      .content.beranda {
+        * {
+          max-width: 70%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: (1366px * 0.7)) {
+  .container {
+    .main {
+      .content.beranda {
+        * {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .container {
+    .main {
+      .content.beranda {
+        padding: var(--height-header) var(--px-container) 0 var(--px-container);
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    .main {
+      .content.beranda {
+        gap: 1.5em;
+        min-height: 100vh;
+        * {
+          max-width: 100%;
+          text-align: center;
+        }
+        .h1 {
+          &::after {
+            color: rgba(var(--c-putih-1), 0.9);
+            padding-top: 1em;
+            width: 100%;
+
+            border-bottom: 3px solid;
+            transform: scale(0.2);
+          }
+        }
+        .button {
+          margin: 1em auto;
+          font-size: var(--font-size-3);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+:root {
+  --c-hitam-1: 0, 0, 0;
+  --c-hitam-2: 10, 10, 10;
+  --c-hitam-3: 40, 40, 40;
+  --c-hitam-4: 60, 60, 60;
+  --c-hitam-5: 80, 80, 80;
+  --c-abuabu-1: 100, 100, 100;
+  --c-abuabu-2: 130, 130, 130;
+  --c-abuabu-3: 160, 160, 160;
+  --c-abuabu-4: 200, 200, 200;
+  --c-biru-1: 0, 100, 255;
+  --c-biru-2: 55, 120, 240;
+
+  --c-putih-1: 250, 250, 250;
+
+  --cs-box-shadow-1: rgba(var(--c-hitam-3), 0.3);
+
+  --font-size-1: 1.4em;
+  --font-size-2: 1.6em;
+  --font-size-3: 1.8em;
+  --font-size-4: 2em;
+  --font-size-5: 2.5em;
+  --font-size-6: 3em;
+  --font-size-7: 3.5em;
+  --font-size-8: 4em;
+
+  --font-family-1: 'quicksand', sans-serif;
+  --font-family-2: 'raleyway', sans-serif;
+
+  --height-header: 11.4em;
+  --px-container: 8%;
+}
+
+$header-size: (
+  h1: var(--font-size-6),
+  h2: var(--font-size-5),
+  h3: var(--font-size-4),
+  h4: var(--font-size-3),
+  h5: var(--font-size-2)
+);

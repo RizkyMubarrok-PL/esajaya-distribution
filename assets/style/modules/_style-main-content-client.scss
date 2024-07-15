@@ -1,0 +1,60 @@
+.container {
+  .main {
+    .client.content {
+      .h1 {
+        text-align: center;
+        margin-bottom: .5em;
+      }
+      .client-container {
+        max-height: 120vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        img {
+          max-width: 24%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px){
+  .container {
+    .main {
+      .client.content {
+        .client-container {
+          // gap: 1% 10%;
+  
+          img {
+            margin-top: 20px;
+            max-width: 24%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 450px){
+  .container {
+    .main {
+      .client.content {
+        .client-container {
+          max-height: 200vh;
+          row-gap: 5%;
+  
+          img {
+            margin: 10px;
+            max-width: 40%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

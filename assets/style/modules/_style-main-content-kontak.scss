@@ -1,0 +1,132 @@
+.container {
+  .main {
+    .content.kontak {
+      .box-container {
+        min-height: 35em;
+        display: grid;
+        grid-template-columns: 3.5fr 6.5fr;
+        align-items: center;
+        gap: 2em;
+        color: rgba(var(--c-putih-1));
+        background: linear-gradient(
+          -5deg,
+          rgba(12, 46, 105, 0.8) 0%,
+          rgba(46, 107, 211, 0.8) 33%,
+          rgb(50, 120, 240, 0.8) 100%
+        );
+
+        .box {
+          display: flex;
+          flex-direction: column;
+
+          &:nth-child(1) {
+            height: 100%;
+            iframe {
+              min-height: 100%;
+            }
+          }
+
+          &:nth-child(2) {
+            padding: 2.5em 0;
+            gap: 0.5em;
+
+            .button-box {
+              width: 100%;
+              height: max-content;
+              .button {
+                padding: 0.7em 1.4em;
+                font-size: 1.6em;
+                background-color: rgba(var(--c-putih-1), 0.2);
+              }
+            }
+
+            .p {
+              &::before {
+                content: "";
+                display: block;
+                width: 4em;
+                margin-bottom: 1em;
+                margin-top: 1em;
+                border-top: 1px solid rgba(var(--c-putih-1), 0.5);
+              }
+            }
+
+            .h1,
+            .h2,
+            .h3 {
+              font-weight: 700;
+            }
+            .p {
+              font-size: 1.6em;
+              font-weight: 500;
+            }
+
+            .no-telp-container {
+              display: flex;
+              flex-direction: column;
+
+              .no-telp {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                font-size: var(--font-size-3);
+                font-weight: 500;
+
+                &:nth-of-type(1) {
+                  padding-bottom: 0.1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .container {
+    .main {
+      .content.kontak {
+        .box-container {
+          grid-template-columns: 4.5fr 5.5fr;
+
+          iframe {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    .main {
+      .content.kontak {
+        min-height: max-content;
+        .box-container {
+          grid-template-columns: 1fr;
+          .box {
+            min-height: 30em;
+
+            &:first-child {
+              grid-row: 2;
+            }
+
+            &:nth-child(2) {
+              gap: 0.5em;
+              padding: 2em;
+              justify-content: center;
+
+              .button-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

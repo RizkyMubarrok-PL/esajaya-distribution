@@ -1,0 +1,179 @@
+.container {
+  .main {
+    .content.produk-kami {
+      display: flex;
+
+      .wrapper {
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        &:nth-child(1) {
+          flex: 0.45;
+          .box-container {
+            position: relative;
+            .swiper {
+              position: absolute;
+              min-width: 28em;
+              max-width: 30em;
+              aspect-ratio: 1 / 1.25;
+              .swiper {
+                width: 100%;
+                background: black;
+              }
+
+              .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(var(--c-hitam-1), 0.5);
+                border-radius: 18px;
+                font-size: 22px;
+                font-weight: bold;
+                color: black;
+                position: relative;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          flex: 0.55;
+          .box-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+
+            .box {
+              width: 100%;
+              height: 22em;
+              border-radius: 1em;
+              display: flex;
+              flex-direction: column;
+              padding: 2em;
+              color: rgba(var(--c-putih-1), 0.9);
+              background-color: rgba(var(--c-biru-2), 0.8);
+              gap: 0.5em;
+              align-items: stretch;
+
+              .p {
+                font-weight: 400;
+              }
+
+              * {
+                text-align: center;
+              }
+
+              .img-box {
+                margin: auto;
+                aspect-ratio: 1 / 1;
+                width: 5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                background-color: rgba(var(--c-putih-1), 0.5);
+
+                i {
+                  font-size: 3em;
+                  color: rgba(var(--c-biru-2), 0.8);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        transition:
+          visibility 0s,
+          opacity 0.3s ease;
+        z-index: 10000;
+
+        img {
+          object-fit: fill;
+          height: 100%;
+          width: auto;
+          border-radius: 10px;
+        }
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .container {
+    .main {
+      .content.produk-kami {
+        gap: 4em;
+        .wrapper {
+          &:nth-child(1) {
+            .swiper {
+              min-width: 24em;
+              max-width: 26em;
+            }
+          }
+          &:nth-child(2) {
+            font-size: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    .main {
+      .content.produk-kami {
+        flex-direction: column;
+
+        .wrapper {
+          overflow: hidden;
+          width: 100%;
+          min-height: 55em;
+
+          &:nth-child(1) {
+            flex: 1;
+
+            .box-container {
+              .swiper {
+                position: unset;
+                min-width: 40em;
+              }
+            }
+          }
+        }
+
+        .overlay {
+          
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
